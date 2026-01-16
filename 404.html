@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script type="text/javascript">
+      // For a repo site (https://<user>.github.io/TJHSite/) set repo = '/TJHSite'.
+      // For a custom domain root set repo = ''.
       var l = window.location;
-      var repo = ''; // Empty for custom domain root deployment
+      var repo = '/TJHSite'; // change to '' if you host on a custom domain root
       var subPath = l.pathname.replace(repo, '') || '/';
       var query = l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '';
       l.replace(
