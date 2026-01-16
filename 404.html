@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script type="text/javascript">
+      var l = window.location;
+      var repo = ''; // Empty for custom domain root deployment
+      var subPath = l.pathname.replace(repo, '') || '/';
+      var query = l.search ? '&q=' + l.search.slice(1).replace(/&/g, '~and~') : '';
+      l.replace(
+        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+        repo + '/?p=' + encodeURIComponent(subPath).replace(/&/g, '~and~') +
+        query + l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>
